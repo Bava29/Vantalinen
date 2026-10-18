@@ -1,0 +1,72 @@
+﻿<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f3ee">
+    <title>Sign in | VantaLinen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <script src="js/auth.js" defer></script>
+</head>
+
+<body>
+    <div class="auth-tools" aria-label="Display settings">
+        <button class="auth-public-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode"
+            title="Dark Mode"><i class="fa-solid fa-moon" aria-hidden="true"></i></button>
+        <button class="auth-public-toggle" type="button" data-dir-toggle aria-label="Switch to RTL layout"
+            title="RTL Mode"><i class="fa-solid fa-right-left" aria-hidden="true"></i></button>
+    </div>
+    <main class="auth-layout">
+        <section class="auth-card" aria-labelledby="form-title">
+            <a class="brand" href="index.html" aria-label="VantaLinen home"><img src="images/logo.png"
+                    alt="VantaLinen — Commercial Linen Care"></a>
+            <p class="eyebrow">WELCOME BACK</p>
+            <h1 id="form-title">Sign in to your account</h1>
+            <p class="intro">Manage your linen services and keep your business moving.</p>
+            <form class="auth-form" data-auth-form>
+                <label for="email">Email address</label>
+                <div class="input-wrap"><i class="fa-regular fa-envelope" aria-hidden="true"></i><input id="email"
+                        name="email" type="email" placeholder="you@company.com" autocomplete="email" required></div>
+                <label for="password">Password</label>
+                <div class="input-wrap"><i class="fa-solid fa-lock" aria-hidden="true"></i><input id="password"
+                        name="password" type="password" placeholder="Enter your password"
+                        autocomplete="current-password" required minlength="8"><button class="password-toggle"
+                        type="button" aria-label="Show password" data-password-toggle><i class="fa-regular fa-eye"
+                            aria-hidden="true"></i></button></div>
+                <div class="form-options"><label class="check-row"><input type="checkbox" name="remember"><span>Remember
+                            me</span></label><a href="#" class="text-link" data-demo-link>Forgot password?</a></div>
+                <button class="submit-button" type="submit">Sign in <i class="fa-solid fa-arrow-right"
+                        aria-hidden="true"></i></button>
+                <p class="form-message" role="status" aria-live="polite"></p>
+                <div class="social-divider"><span>Or continue with</span></div>
+                <div class="social-buttons" aria-label="Social sign in options">
+                    <button type="button" class="social-button" data-social="Google"><svg class="google-logo"
+                            viewBox="0 0 48 48" aria-hidden="true">
+                            <path fill="#4285F4"
+                                d="M43.6 24.5c0-1.4-.1-2.8-.4-4.1H24v7.8h11a9.4 9.4 0 0 1-4.1 6.2v5.1h6.6c3.9-3.6 6.1-8.8 6.1-15Z" />
+                            <path fill="#34A853"
+                                d="M24 44c5.5 0 10.1-1.8 13.5-4.8l-6.6-5.1c-1.8 1.2-4 2-6.9 2-5.3 0-9.8-3.6-11.4-8.4H5.8v5.3A20 20 0 0 0 24 44Z" />
+                            <path fill="#FBBC05" d="M12.6 27.7a12 12 0 0 1 0-7.4V15H5.8a20 20 0 0 0 0 18l6.8-5.3Z" />
+                            <path fill="#EA4335"
+                                d="M24 11.9c3 0 5.7 1 7.8 3.1l5.8-5.8C34.1 5.9 29.5 4 24 4A20 20 0 0 0 5.8 15l6.8 5.3c1.6-4.8 6.1-8.4 11.4-8.4Z" />
+                        </svg><span>Google</span></button>
+                    <button type="button" class="social-button social-facebook" data-social="Facebook"><i
+                            class="fa-brands fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></button>
+                    <button type="button" class="social-button social-apple" data-social="Apple"><i
+                            class="fa-brands fa-apple" aria-hidden="true"></i><span>Apple</span></button>
+                </div>
+            </form>
+            <p class="switch-auth">New to VantaLinen? <a class="text-link" href="register.html">Create an account</a>
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>

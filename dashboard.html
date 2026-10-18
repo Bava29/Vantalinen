@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f3ee">
+    <title>VantaLinen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/dashboard.js" defer></script>
+</head>
+
+<body>
+    <div class="dashboard-overlay" data-sidebar-overlay></div>
+    <aside class="sidebar" id="dashboardSidebar" aria-label="Dashboard navigation">
+        <a class="sidebar-brand" href="index.html" aria-label="VantaLinen home"><img src="images/logo-white.png"
+                alt="VantaLinen"></a>
+        <div class="sidebar-label">WORKSPACE</div>
+        <nav class="sidebar-nav">
+            <a class="nav-item active" href="dashboard.html" aria-current="page"><i
+                    class="fa-solid fa-chart-pie"></i><span>Overview</span></a>
+            <a class="nav-item" href="d2.html"><i class="fa-solid fa-truck-fast"></i><span>Pickups &amp;
+                    deliveries</span><span class="nav-count">2</span></a>
+            <a class="nav-item" href="d3.html"><i class="fa-solid fa-boxes-stacked"></i><span>Linen
+                    inventory</span></a>
+            <a class="nav-item" href="d4.html"><i class="fa-regular fa-file-lines"></i><span>Service
+                    Invoices</span></a>
+            <a class="nav-item" href="d5.html"><i class="fas fa-file-signature"></i><span>Contract Renewals</span></a>
+            <a class="nav-item" href="d6.html"><i class="fa-regular fa-message"></i><span>Service requests</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <button class="logout-button" type="button" data-logout-open><i
+                    class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></button>
+
+        </div>
+    </aside>
+
+    <header class="topbar">
+        <div class="topbar-start">
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+                aria-controls="dashboardSidebar" data-menu-toggle><span></span><span></span><span></span></button>
+            <div>
+                <p class="topbar-kicker">CLIENT PORTAL</p>
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+        <div class="topbar-actions">
+            <button class="header-icon" type="button" data-theme-toggle aria-label="Switch to dark mode"
+                title="Dark Mode"><i class="fa-solid fa-moon"></i></button>
+            <button class="header-icon" type="button" data-dir-toggle aria-label="Switch to RTL layout"
+                title="RTL Mode"><i class="fa-solid fa-right-left"></i></button>
+            <div class="notification-wrap">
+                <button class="header-icon notification-button" type="button" aria-label="Notifications, 3 unread"
+                    aria-expanded="false" data-notification-toggle><i class="fa-regular fa-bell"></i><span
+                        class="notification-badge">3</span></button>
+                <div class="notification-popover" data-notification-popover hidden>
+                    <div class="popover-heading"><strong>Notifications</strong><span>3 new</span></div>
+                    <a class="notification-item" href="d2.html"><span class="notice-dot"></span><span><strong>Pickup
+                                scheduled</strong><small>Your next collection is tomorrow at 9:00 AM.</small><time>10
+                                min ago</time></span></a>
+                    <a class="notification-item" href="d4.html"><span
+                            class="notice-dot notice-blue"></span><span><strong>Invoice ready</strong><small>Invoice
+                                VL-2026-014 is ready to review.</small><time>2 hours ago</time></span></a>
+                    <a class="notification-item" href="d6.html"><span
+                            class="notice-dot notice-gold"></span><span><strong>Request updated</strong><small>Your
+                                service request has been received.</small><time>Yesterday</time></span></a>
+                    <a class="all-notifications" href="d6.html">View all notifications <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <button class="profile-button" type="button" data-profile-button aria-label="Open client profile">
+                <span class="avatar"><img src="images/client-profile.jpg" alt=""></span><span
+                    class="profile-copy"><strong>Arun Raj</strong><small>Hotel
+                        administrator</small></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+
+
+        <!-- SECTION 1: Welcome & Quick Action -->
+        <section class="welcome-row">
+            <div>
+                <p class="section-eyebrow">YOUR BUSINESS AT A GLANCE</p>
+                <h2>Welcome back, Arun <span>✦</span></h2>
+                <p>Here is your laundry service overview for today.</p>
+                <p><i class="fa-regular fa-calendar"></i> <span data-today></span></p>
+            </div>
+
+            <a href="d2.html" class="primary-action">
+                <i class="fa-solid fa-truck-fast"></i>
+                View Pickup Schedule
+            </a>
+        </section>
+
+        <!-- SECTION 2: Service Overview -->
+        <section class="stats-grid" aria-label="Service overview">
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-purple">
+                        <i class="fa-solid fa-shirt"></i>
+                    </span>
+                    <span class="stat-trend">
+                        <i class="fa-solid fa-check"></i> Active
+                    </span>
+                </div>
+                <p class="stat-label">Active Services</p>
+                <div class="stat-value">04</div>
+                <p class="stat-note">Services currently in progress</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-blue">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </span>
+                    <span class="stat-status">Scheduled</span>
+                </div>
+                <p class="stat-label">Pending Pickups</p>
+                <div class="stat-value">02</div>
+                <p class="stat-note">Upcoming collection requests</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-gold">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </span>
+                    <span class="stat-neutral">This month</span>
+                </div>
+                <p class="stat-label">Outstanding Invoices</p>
+                <div class="stat-value">₹24,500</div>
+                <p class="stat-note">2 invoices awaiting payment</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-green">
+                        <i class="fa-regular fa-calendar-check"></i>
+                    </span>
+                    <span class="stat-trend">Upcoming</span>
+                </div>
+                <p class="stat-label">Next Pickup</p>
+                <div class="stat-value stat-date">
+                    17 Oct
+                    <small>9:00 AM – 11:00 AM</small>
+                </div>
+                <p class="stat-note">Scheduled collection window</p>
+            </article>
+
+        </section>
+
+        <!-- SECTION 3: Upcoming Pickup & Client Profile -->
+        <section class="content-grid" aria-label="Pickup and client details">
+
+            <article class="panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="section-eyebrow">NEXT COLLECTION</p>
+                        <h3>Upcoming Pickup</h3>
+                    </div>
+                    <a href="d2.html" class="panel-link">
+                        View schedule <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="pickup-highlight">
+                    <div class="pickup-date">
+                        <strong>17</strong>
+                        <span>OCT</span>
+                    </div>
+
+                    <div class="pickup-details">
+                        <span class="status-pill">
+                            <i class="fa-solid fa-circle"></i> Confirmed
+                        </span>
+                        <h4>Hotel Linen Collection</h4>
+                        <p><i class="fa-regular fa-clock"></i> 9:00 AM – 11:00 AM</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Main Hotel Loading Bay</p>
+                        <p><i class="fa-solid fa-box"></i> Linen, towels &amp; uniforms</p>
+                    </div>
+
+                    <i class="fa-solid fa-truck pickup-truck"></i>
+                </div>
+
+                <div class="pickup-footer">
+                    <span><i class="fa-solid fa-circle-check"></i> Driver assignment confirmed</span>
+                    <a href="d2.html">Track pickup</a>
+                </div>
+            </article>
+
+            <article class="panel profile-panel" id="profile">
+                <div class="panel-heading">
+                    <div>
+                        <p class="section-eyebrow">ACCOUNT DETAILS</p>
+                        <h3>Client Profile</h3>
+                    </div>
+                    <button class="more-button" type="button" aria-label="Profile settings"
+                        onclick="window.location.href='#'">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                </div>
+
+                <div class="client-profile">
+                    <span class="avatar avatar-large">
+                        <img src="images/client-profile.jpg" alt="">
+                    </span>
+                    <div>
+                        <h4>Arun Raj</h4>
+                        <p>Hotel Administrator</p>
+                    </div>
+                    <span class="verified">
+                        <i class="fa-solid fa-circle-check"></i> Verified
+                    </span>
+                </div>
+
+                <div class="profile-info">
+                    <div>
+                        <span>Client ID</span>
+                        <strong>VL-CL-0024</strong>
+                    </div>
+                    <div>
+                        <span>Account Status</span>
+                        <strong>Active Account</strong>
+                    </div>
+                    <div>
+                        <span>Business</span>
+                        <strong>Grand Palace Hotel</strong>
+                    </div>
+                </div>
+
+                <a href="#" class="profile-link">
+                    Manage account <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </article>
+
+        </section>
+
+        <!-- SECTION 4: Recent Activity & Linen Inventory -->
+        <section class="content-grid" aria-label="Recent activity and linen inventory">
+
+            <article class="panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="section-eyebrow">LATEST UPDATES</p>
+                        <h3>Recent Activity</h3>
+                    </div>
+                    <a href="d6.html" class="panel-link">
+                        View requests <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="activity-list">
+
+                    <div class="activity-item">
+                        <span class="activity-icon activity-green">
+                            <i class="fa-solid fa-check"></i>
+                        </span>
+                        <div>
+                            <strong>Linen processing completed</strong>
+                            <p>Your latest linen batch is ready for delivery.</p>
+                        </div>
+                        <time>Today</time>
+                        <span class="activity-tag">Completed</span>
+                    </div>
+
+                    <div class="activity-item">
+                        <span class="activity-icon activity-blue">
+                            <i class="fa-solid fa-truck"></i>
+                        </span>
+                        <div>
+                            <strong>Pickup scheduled</strong>
+                            <p>Collection confirmed for 17 October.</p>
+                        </div>
+                        <time>Yesterday</time>
+                        <span class="activity-tag tag-link">Scheduled</span>
+                    </div>
+
+                    <div class="activity-item">
+                        <span class="activity-icon activity-gold">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </span>
+                        <div>
+                            <strong>New invoice generated</strong>
+                            <p>Invoice VL-2026-014 is ready to review.</p>
+                        </div>
+                        <time>14 Oct</time>
+                        <span class="activity-tag tag-link">Review</span>
+                    </div>
+
+                    <div class="activity-item">
+                        <span class="activity-icon activity-green">
+                            <i class="fa-solid fa-message"></i>
+                        </span>
+                        <div>
+                            <strong>Service request received</strong>
+                            <p>Your additional towel request has been logged.</p>
+                        </div>
+                        <time>13 Oct</time>
+                        <span class="activity-tag">Received</span>
+                    </div>
+
+                </div>
+            </article>
+
+            <article class="panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="section-eyebrow">STOCK SUMMARY</p>
+                        <h3>Linen Inventory</h3>
+                    </div>
+                    <a href="d3.html" class="panel-link">
+                        View inventory <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="inventory-list">
+
+                    <div class="inventory-row">
+                        <span class="inventory-symbol symbol-sheet">
+                            <i class="fa-solid fa-bed"></i>
+                        </span>
+                        <span class="inventory-name">Bed Sheets</span>
+                        <strong>840</strong>
+                        <span class="inventory-bar"><i style="width: 84%"></i></span>
+                    </div>
+
+                    <div class="inventory-row">
+                        <span class="inventory-symbol symbol-towel">
+                            <i class="fa-solid fa-water"></i>
+                        </span>
+                        <span class="inventory-name">Bath Towels</span>
+                        <strong>620</strong>
+                        <span class="inventory-bar"><i style="width: 68%"></i></span>
+                    </div>
+
+                    <div class="inventory-row">
+                        <span class="inventory-symbol symbol-pillow">
+                            <i class="fa-solid fa-cubes-stacked"></i>
+                        </span>
+                        <span class="inventory-name">Pillowcases</span>
+                        <strong>450</strong>
+                        <span class="inventory-bar"><i style="width: 52%"></i></span>
+                    </div>
+
+                    <div class="inventory-row">
+                        <span class="inventory-symbol symbol-table">
+                            <i class="fa-solid fa-table"></i>
+                        </span>
+                        <span class="inventory-name">Table Linen</span>
+                        <strong>310</strong>
+                        <span class="inventory-bar"><i style="width: 38%"></i></span>
+                    </div>
+
+                </div>
+
+                <div class="pickup-footer">
+                    <span><i class="fa-solid fa-boxes-stacked"></i> Total tracked items: 2,220</span>
+                    <a href="d3.html">Manage stock</a>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <div class="modal-backdrop" data-logout-modal hidden>
+        <section class="confirm-card" role="dialog" aria-modal="true" aria-labelledby="logout-title"
+            aria-describedby="logout-copy">
+            <span class="confirm-icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+            <h2 id="logout-title">Log out of your account?</h2>
+            <p id="logout-copy">Are you sure you want to leave your client dashboard?</p>
+            <div class="confirm-actions"><button class="cancel-button" type="button" data-logout-cancel>No,
+                    stay</button><button class="confirm-logout" type="button" data-logout-confirm>Yes, log out</button>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

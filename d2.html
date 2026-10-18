@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f3ee">
+    <title>VantaLinen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/dashboard.js" defer></script>
+</head>
+
+<body>
+    <div class="dashboard-overlay" data-sidebar-overlay></div>
+    <aside class="sidebar" id="dashboardSidebar" aria-label="Dashboard navigation">
+        <a class="sidebar-brand" href="index.html" aria-label="VantaLinen home"><img src="images/logo-white.png"
+                alt="VantaLinen"></a>
+        <div class="sidebar-label">WORKSPACE</div>
+        <nav class="sidebar-nav">
+            <a class="nav-item" href="dashboard.html" aria-current="page"><i
+                    class="fa-solid fa-chart-pie"></i><span>Overview</span></a>
+            <a class="nav-item active" href="d2.html"><i class="fa-solid fa-truck-fast"></i><span>Pickups &amp;
+                    deliveries</span><span class="nav-count">2</span></a>
+            <a class="nav-item" href="d3.html"><i class="fa-solid fa-boxes-stacked"></i><span>Linen
+                    inventory</span></a>
+            <a class="nav-item" href="d4.html"><i class="fa-regular fa-file-lines"></i><span>Service
+                    Invoices</span></a>
+            <a class="nav-item" href="d5.html"><i class="fas fa-file-signature"></i><span>Contract Renewals</span></a>
+            <a class="nav-item" href="d6.html"><i class="fa-regular fa-message"></i><span>Service requests</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <button class="logout-button" type="button" data-logout-open><i
+                    class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></button>
+
+        </div>
+    </aside>
+
+    <header class="topbar">
+        <div class="topbar-start">
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+                aria-controls="dashboardSidebar" data-menu-toggle><span></span><span></span><span></span></button>
+            <div>
+                <p class="topbar-kicker">CLIENT PORTAL</p>
+                <h1>Pickups & Delivery</h1>
+            </div>
+        </div>
+        <div class="topbar-actions">
+            <button class="header-icon" type="button" data-theme-toggle aria-label="Switch to dark mode"
+                title="Dark Mode"><i class="fa-solid fa-moon"></i></button>
+            <button class="header-icon" type="button" data-dir-toggle aria-label="Switch to RTL layout"
+                title="RTL Mode"><i class="fa-solid fa-right-left"></i></button>
+            <div class="notification-wrap">
+                <button class="header-icon notification-button" type="button" aria-label="Notifications, 3 unread"
+                    aria-expanded="false" data-notification-toggle><i class="fa-regular fa-bell"></i><span
+                        class="notification-badge">3</span></button>
+                <div class="notification-popover" data-notification-popover hidden>
+                    <div class="popover-heading"><strong>Notifications</strong><span>3 new</span></div>
+                    <a class="notification-item" href="d2.html"><span class="notice-dot"></span><span><strong>Pickup
+                                scheduled</strong><small>Your next collection is tomorrow at 9:00 AM.</small><time>10
+                                min ago</time></span></a>
+                    <a class="notification-item" href="d4.html"><span
+                            class="notice-dot notice-blue"></span><span><strong>Invoice ready</strong><small>Invoice
+                                VL-2026-014 is ready to review.</small><time>2 hours ago</time></span></a>
+                    <a class="notification-item" href="d6.html"><span
+                            class="notice-dot notice-gold"></span><span><strong>Request updated</strong><small>Your
+                                service request has been received.</small><time>Yesterday</time></span></a>
+                    <a class="all-notifications" href="d6.html">View all notifications <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <button class="profile-button" type="button" data-profile-button aria-label="Open client profile">
+                <span class="avatar"><img src="images/client-profile.jpg" alt=""></span><span
+                    class="profile-copy"><strong>Arun Raj</strong><small>Hotel
+                        administrator</small></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+
+
+        <!-- SECTION 1: Pickup & Delivery Overview -->
+        <section class="welcome-row">
+            <div>
+                <p class="section-eyebrow">LOGISTICS CENTER</p>
+                <h2>Pickups &amp; Deliveries</h2>
+                <p>Manage your linen collections and deliveries in one place.</p>
+            </div>
+            <a href="d6.html" class="primary-action">
+                <i class="fa-solid fa-plus"></i> Request a Pickup
+            </a>
+        </section>
+
+        <section class="stats-grid pickup-stats">
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-purple">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </span>
+                    <span class="stat-status">Scheduled</span>
+                </div>
+                <p class="stat-label">Scheduled Pickups</p>
+                <div class="stat-value">04</div>
+                <p class="stat-note">Across your service locations</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-blue">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </span>
+                    <span class="stat-trend">On track</span>
+                </div>
+                <p class="stat-label">Deliveries in Transit</p>
+                <div class="stat-value">02</div>
+                <p class="stat-note">Linen orders being delivered</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-gold">
+                        <i class="fa-regular fa-clock"></i>
+                    </span>
+                    <span class="stat-neutral">Upcoming</span>
+                </div>
+                <p class="stat-label">Next Collection</p>
+                <div class="stat-value stat-date">
+                    17 Oct
+                    <small>09:00 AM</small>
+                </div>
+                <p class="stat-note">Scheduled pickup window</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-green">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </span>
+                    <span class="stat-trend">Completed</span>
+                </div>
+                <p class="stat-label">Completed This Month</p>
+                <div class="stat-value">18</div>
+                <p class="stat-note">Successful service trips</p>
+            </article>
+
+        </section>
+
+        <!-- SECTION 2: Upcoming Schedule -->
+        <section class="panel schedule-panel">
+            <div class="panel-heading">
+                <div>
+                    <p class="section-eyebrow">YOUR SERVICE PLAN</p>
+                    <h3>Upcoming Schedule</h3>
+                </div>
+                <span class="schedule-count">3 upcoming</span>
+            </div>
+
+            <div class="schedule-list">
+
+                <article class="schedule-item">
+                    <div class="schedule-date">
+                        <strong>17</strong>
+                        <span>OCT</span>
+                    </div>
+                    <div class="schedule-details">
+                        <strong>Fresh Linen Collection</strong>
+                        <p><i class="fa-regular fa-clock"></i> 09:00 AM – 10:00 AM</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Main Hotel — Laundry Entrance</p>
+                    </div>
+                    <span class="schedule-status status-scheduled">Scheduled</span>
+                </article>
+
+                <article class="schedule-item">
+                    <div class="schedule-date">
+                        <strong>18</strong>
+                        <span>OCT</span>
+                    </div>
+                    <div class="schedule-details">
+                        <strong>Clean Linen Delivery</strong>
+                        <p><i class="fa-regular fa-clock"></i> 11:00 AM – 12:00 PM</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Main Hotel — Receiving Bay</p>
+                    </div>
+                    <span class="schedule-status status-transit">In Transit</span>
+                </article>
+
+                <article class="schedule-item">
+                    <div class="schedule-date">
+                        <strong>20</strong>
+                        <span>OCT</span>
+                    </div>
+                    <div class="schedule-details">
+                        <strong>Uniform Collection</strong>
+                        <p><i class="fa-regular fa-clock"></i> 02:00 PM – 03:00 PM</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Staff Service Entrance</p>
+                    </div>
+                    <span class="schedule-status status-scheduled">Scheduled</span>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECTION 3: Pickup & Delivery History -->
+        <section class="panel history-panel">
+            <div class="panel-heading">
+                <div>
+                    <p class="section-eyebrow">SERVICE RECORDS</p>
+                    <h3>Recent Pickup &amp; Delivery History</h3>
+                </div>
+                <span class="history-label">
+                    <i class="fa-solid fa-clock-rotate-left"></i> Recent activity
+                </span>
+            </div>
+
+            <div class="history-table-wrap">
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Reference ID</th>
+                            <th>Service</th>
+                            <th>Date</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>VL-PD-1048</td>
+                            <td>Pickup</td>
+                            <td>15 Oct 2026</td>
+                            <td>Main Hotel</td>
+                            <td><span class="schedule-status status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>VL-PD-1047</td>
+                            <td>Delivery</td>
+                            <td>14 Oct 2026</td>
+                            <td>Main Hotel</td>
+                            <td><span class="schedule-status status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>VL-PD-1046</td>
+                            <td>Pickup</td>
+                            <td>12 Oct 2026</td>
+                            <td>Staff Service Entrance</td>
+                            <td><span class="schedule-status status-cancelled">Cancelled</span></td>
+                        </tr>
+                        <tr>
+                            <td>VL-PD-1045</td>
+                            <td>Delivery</td>
+                            <td>10 Oct 2026</td>
+                            <td>Main Hotel</td>
+                            <td><span class="schedule-status status-completed">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="modal-backdrop" data-logout-modal hidden>
+        <section class="confirm-card" role="dialog" aria-modal="true" aria-labelledby="logout-title"
+            aria-describedby="logout-copy">
+            <span class="confirm-icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+            <h2 id="logout-title">Log out of your account?</h2>
+            <p id="logout-copy">Are you sure you want to leave your client dashboard?</p>
+            <div class="confirm-actions"><button class="cancel-button" type="button" data-logout-cancel>No,
+                    stay</button><button class="confirm-logout" type="button" data-logout-confirm>Yes, log out</button>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

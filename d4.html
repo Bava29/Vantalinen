@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f3ee">
+    <title>VantaLinen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/dashboard.js" defer></script>
+</head>
+
+<body>
+    <div class="dashboard-overlay" data-sidebar-overlay></div>
+    <aside class="sidebar" id="dashboardSidebar" aria-label="Dashboard navigation">
+        <a class="sidebar-brand" href="index.html" aria-label="VantaLinen home"><img src="images/logo-white.png"
+                alt="VantaLinen"></a>
+        <div class="sidebar-label">WORKSPACE</div>
+        <nav class="sidebar-nav">
+            <a class="nav-item" href="dashboard.html" aria-current="page"><i
+                    class="fa-solid fa-chart-pie"></i><span>Overview</span></a>
+            <a class="nav-item" href="d2.html"><i class="fa-solid fa-truck-fast"></i><span>Pickups &amp;
+                    deliveries</span><span class="nav-count">2</span></a>
+            <a class="nav-item" href="d3.html"><i class="fa-solid fa-boxes-stacked"></i><span>Linen
+                    inventory</span></a>
+            <a class="nav-item active" href="d4.html"><i class="fa-regular fa-file-lines"></i><span>Service
+                    Invoices</span></a>
+            <a class="nav-item" href="d5.html"><i class="fas fa-file-signature"></i><span>Contract Renewals</span></a>
+            <a class="nav-item" href="d6.html"><i class="fa-regular fa-message"></i><span>Service requests</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <button class="logout-button" type="button" data-logout-open><i
+                    class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></button>
+
+        </div>
+    </aside>
+
+    <header class="topbar">
+        <div class="topbar-start">
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+                aria-controls="dashboardSidebar" data-menu-toggle><span></span><span></span><span></span></button>
+            <div>
+                <p class="topbar-kicker">CLIENT PORTAL</p>
+                <h1>Service Invoices</h1>
+            </div>
+        </div>
+        <div class="topbar-actions">
+            <button class="header-icon" type="button" data-theme-toggle aria-label="Switch to dark mode"
+                title="Dark Mode"><i class="fa-solid fa-moon"></i></button>
+            <button class="header-icon" type="button" data-dir-toggle aria-label="Switch to RTL layout"
+                title="RTL Mode"><i class="fa-solid fa-right-left"></i></button>
+            <div class="notification-wrap">
+                <button class="header-icon notification-button" type="button" aria-label="Notifications, 3 unread"
+                    aria-expanded="false" data-notification-toggle><i class="fa-regular fa-bell"></i><span
+                        class="notification-badge">3</span></button>
+                <div class="notification-popover" data-notification-popover hidden>
+                    <div class="popover-heading"><strong>Notifications</strong><span>3 new</span></div>
+                    <a class="notification-item" href="d2.html"><span class="notice-dot"></span><span><strong>Pickup
+                                scheduled</strong><small>Your next collection is tomorrow at 9:00 AM.</small><time>10
+                                min ago</time></span></a>
+                    <a class="notification-item" href="d4.html"><span
+                            class="notice-dot notice-blue"></span><span><strong>Invoice ready</strong><small>Invoice
+                                VL-2026-014 is ready to review.</small><time>2 hours ago</time></span></a>
+                    <a class="notification-item" href="d6.html"><span
+                            class="notice-dot notice-gold"></span><span><strong>Request updated</strong><small>Your
+                                service request has been received.</small><time>Yesterday</time></span></a>
+                    <a class="all-notifications" href="d6.html">View all notifications <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <button class="profile-button" type="button" data-profile-button aria-label="Open client profile">
+                <span class="avatar"><img src="images/client-profile.jpg" alt=""></span><span
+                    class="profile-copy"><strong>Arun Raj</strong><small>Hotel
+                        administrator</small></span>
+            </button>
+        </div>
+    </header>
+
+
+    <main class="dashboard-main">
+
+        <!-- SECTION 1: INVOICE OVERVIEW -->
+        <section class="welcome-row">
+            <div>
+                <p class="section-eyebrow">BILLING &amp; PAYMENTS</p>
+                <h2>Service Invoices</h2>
+                <p>Track your laundry service bills, outstanding balances and payments.</p>
+            </div>
+            <a href="#invoice-records" class="primary-action">
+                <i class="fa-solid fa-file-invoice"></i> View Invoices
+            </a>
+        </section>
+
+        <section class="stats-grid invoice-stats">
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-purple">
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </span>
+                    <span class="stat-status">This month</span>
+                </div>
+                <p class="stat-label">Total Invoices</p>
+                <div class="stat-value">12</div>
+                <p class="stat-note">Invoices issued in October</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-gold">
+                        <i class="fa-solid fa-wallet"></i>
+                    </span>
+                    <span class="stat-neutral">Pending payment</span>
+                </div>
+                <p class="stat-label">Outstanding Amount</p>
+                <div class="stat-value invoice-amount">₹24,500</div>
+                <p class="stat-note">Balance remaining to be paid</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-green">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </span>
+                    <span class="stat-trend">Paid</span>
+                </div>
+                <p class="stat-label">Paid Invoices</p>
+                <div class="stat-value">08</div>
+                <p class="stat-note">Successfully settled invoices</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-blue">
+                        <i class="fa-solid fa-calendar-xmark"></i>
+                    </span>
+                    <span class="stat-status invoice-overdue-label">Action needed</span>
+                </div>
+                <p class="stat-label">Overdue Invoices</p>
+                <div class="stat-value">02</div>
+                <p class="stat-note">Invoices past their due date</p>
+            </article>
+
+        </section>
+
+        <!-- SECTION 2: INVOICE RECORDS -->
+        <section class="panel invoice-records-panel" id="invoice-records">
+
+            <div class="panel-heading">
+                <div>
+                    <p class="section-eyebrow">BILLING HISTORY</p>
+                    <h3>Invoice Records</h3>
+                </div>
+                <span class="schedule-count">
+                    <i class="fa-solid fa-receipt"></i> Recent invoices
+                </span>
+            </div>
+
+            <div class="invoice-table-wrap">
+                <table class="invoice-table">
+                    <thead>
+                        <tr>
+                            <th>Invoice</th>
+                            <th>Service Period</th>
+                            <th>Due Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong class="invoice-number">VL-INV-1024</strong>
+                                <small class="invoice-subtext">Laundry services</small>
+                            </td>
+                            <td>01–07 Oct 2026</td>
+                            <td>20 Oct 2026</td>
+                            <td class="invoice-price">₹12,500</td>
+                            <td>
+                                <span class="invoice-status invoice-pending">Pending</span>
+                            </td>
+                            <td>
+                                <a href="#recent-payments" class="invoice-action">Details</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong class="invoice-number">VL-INV-1023</strong>
+                                <small class="invoice-subtext">Linen cleaning</small>
+                            </td>
+                            <td>24–30 Sep 2026</td>
+                            <td>10 Oct 2026</td>
+                            <td class="invoice-price">₹8,000</td>
+                            <td>
+                                <span class="invoice-status invoice-overdue">Overdue</span>
+                            </td>
+                            <td>
+                                <a href="#recent-payments" class="invoice-action">Details</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong class="invoice-number">VL-INV-1022</strong>
+                                <small class="invoice-subtext">Uniform care</small>
+                            </td>
+                            <td>17–23 Sep 2026</td>
+                            <td>05 Oct 2026</td>
+                            <td class="invoice-price">₹6,500</td>
+                            <td>
+                                <span class="invoice-status invoice-paid">Paid</span>
+                            </td>
+                            <td>
+                                <a href="#recent-payments" class="invoice-action">Details</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong class="invoice-number">VL-INV-1021</strong>
+                                <small class="invoice-subtext">Laundry services</small>
+                            </td>
+                            <td>10–16 Sep 2026</td>
+                            <td>25 Sep 2026</td>
+                            <td class="invoice-price">₹9,500</td>
+                            <td>
+                                <span class="invoice-status invoice-paid">Paid</span>
+                            </td>
+                            <td>
+                                <a href="#recent-payments" class="invoice-action">Details</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong class="invoice-number">VL-INV-1020</strong>
+                                <small class="invoice-subtext">Linen cleaning</small>
+                            </td>
+                            <td>03–09 Sep 2026</td>
+                            <td>18 Sep 2026</td>
+                            <td class="invoice-price">₹7,000</td>
+                            <td>
+                                <span class="invoice-status invoice-overdue">Overdue</span>
+                            </td>
+                            <td>
+                                <a href="#recent-payments" class="invoice-action">Details</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- SECTION 3: RECENT PAYMENTS -->
+        <section class="panel recent-payments-panel" id="recent-payments">
+
+            <div class="panel-heading">
+                <div>
+                    <p class="section-eyebrow">PAYMENT ACTIVITY</p>
+                    <h3>Recent Payments</h3>
+                </div>
+                <span class="history-label">
+                    <i class="fa-solid fa-clock-rotate-left"></i> Latest transactions
+                </span>
+            </div>
+
+            <div class="payment-list">
+
+                <article class="payment-item">
+                    <span class="payment-icon payment-success">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                    <div class="payment-info">
+                        <strong>Invoice VL-INV-1022</strong>
+                        <p>Uniform care service</p>
+                        <small>05 Oct 2026 · UPI</small>
+                        <small class="payment-reference">Ref: TXN-804521</small>
+                    </div>
+
+                    <div class="payment-amount">
+                        <strong>₹6,500</strong>
+                        <span class="invoice-status invoice-paid">Successful</span>
+                    </div>
+                </article>
+
+                <article class="payment-item">
+                    <span class="payment-icon payment-success">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                    <div class="payment-info">
+                        <strong>Invoice VL-INV-1021</strong>
+                        <p>Weekly laundry service</p>
+                        <small>25 Sep 2026 · Bank Transfer</small>
+                        <small class="payment-reference">Ref: TXN-803917</small>
+                    </div>
+
+                    <div class="payment-amount">
+                        <strong>₹9,500</strong>
+                        <span class="invoice-status invoice-paid">Successful</span>
+                    </div>
+                </article>
+
+                <article class="payment-item">
+                    <span class="payment-icon payment-success">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                    <div class="payment-info">
+                        <strong>Invoice VL-INV-1019</strong>
+                        <p>Hotel linen cleaning</p>
+                        <small>12 Sep 2026 · Card</small>
+                        <small class="payment-reference">Ref: TXN-802684</small>
+                    </div>
+
+                    <div class="payment-amount">
+                        <strong>₹5,800</strong>
+                        <span class="invoice-status invoice-paid">Successful</span>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <div class="modal-backdrop" data-logout-modal hidden>
+        <section class="confirm-card" role="dialog" aria-modal="true" aria-labelledby="logout-title"
+            aria-describedby="logout-copy">
+            <span class="confirm-icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+            <h2 id="logout-title">Log out of your account?</h2>
+            <p id="logout-copy">Are you sure you want to leave your client dashboard?</p>
+            <div class="confirm-actions"><button class="cancel-button" type="button" data-logout-cancel>No,
+                    stay</button><button class="confirm-logout" type="button" data-logout-confirm>Yes, log out</button>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

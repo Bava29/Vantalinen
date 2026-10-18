@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f3ee">
+    <title>VantaLinen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/dashboard.js" defer></script>
+</head>
+
+<body>
+    <div class="dashboard-overlay" data-sidebar-overlay></div>
+    <aside class="sidebar" id="dashboardSidebar" aria-label="Dashboard navigation">
+        <a class="sidebar-brand" href="index.html" aria-label="VantaLinen home"><img src="images/logo-white.png"
+                alt="VantaLinen"></a>
+        <div class="sidebar-label">WORKSPACE</div>
+        <nav class="sidebar-nav">
+            <a class="nav-item" href="dashboard.html" aria-current="page"><i
+                    class="fa-solid fa-chart-pie"></i><span>Overview</span></a>
+            <a class="nav-item" href="d2.html"><i class="fa-solid fa-truck-fast"></i><span>Pickups &amp;
+                    deliveries</span><span class="nav-count">2</span></a>
+            <a class="nav-item" href="d3.html"><i class="fa-solid fa-boxes-stacked"></i><span>Linen
+                    inventory</span></a>
+            <a class="nav-item" href="d4.html"><i class="fa-regular fa-file-lines"></i><span>Service
+                    Invoices</span></a>
+            <a class="nav-item active" href="d5.html"><i class="fas fa-file-signature"></i><span>Contract
+                    Renewals</span></a>
+            <a class="nav-item" href="d6.html"><i class="fa-regular fa-message"></i><span>Service requests</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <button class="logout-button" type="button" data-logout-open><i
+                    class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></button>
+
+        </div>
+    </aside>
+
+    <header class="topbar">
+        <div class="topbar-start">
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+                aria-controls="dashboardSidebar" data-menu-toggle><span></span><span></span><span></span></button>
+            <div>
+                <p class="topbar-kicker">CLIENT PORTAL</p>
+                <h1>Contract Renewals</h1>
+            </div>
+        </div>
+        <div class="topbar-actions">
+            <button class="header-icon" type="button" data-theme-toggle aria-label="Switch to dark mode"
+                title="Dark Mode"><i class="fa-solid fa-moon"></i></button>
+            <button class="header-icon" type="button" data-dir-toggle aria-label="Switch to RTL layout"
+                title="RTL Mode"><i class="fa-solid fa-right-left"></i></button>
+            <div class="notification-wrap">
+                <button class="header-icon notification-button" type="button" aria-label="Notifications, 3 unread"
+                    aria-expanded="false" data-notification-toggle><i class="fa-regular fa-bell"></i><span
+                        class="notification-badge">3</span></button>
+                <div class="notification-popover" data-notification-popover hidden>
+                    <div class="popover-heading"><strong>Notifications</strong><span>3 new</span></div>
+                    <a class="notification-item" href="d2.html"><span class="notice-dot"></span><span><strong>Pickup
+                                scheduled</strong><small>Your next collection is tomorrow at 9:00 AM.</small><time>10
+                                min ago</time></span></a>
+                    <a class="notification-item" href="d4.html"><span
+                            class="notice-dot notice-blue"></span><span><strong>Invoice ready</strong><small>Invoice
+                                VL-2026-014 is ready to review.</small><time>2 hours ago</time></span></a>
+                    <a class="notification-item" href="d6.html"><span
+                            class="notice-dot notice-gold"></span><span><strong>Request updated</strong><small>Your
+                                service request has been received.</small><time>Yesterday</time></span></a>
+                    <a class="all-notifications" href="d6.html">View all notifications <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <button class="profile-button" type="button" data-profile-button aria-label="Open client profile">
+                <span class="avatar"><img src="images/client-profile.jpg" alt=""></span><span
+                    class="profile-copy"><strong>Arun Raj</strong><small>Hotel
+                        administrator</small></span>
+            </button>
+        </div>
+    </header>
+
+
+    <main class="dashboard-main">
+
+        <!-- SECTION 1: RENEWAL OVERVIEW -->
+        <section class="welcome-row">
+            <div>
+                <p class="section-eyebrow">CONTRACT MANAGEMENT</p>
+                <h2>Contract Renewals</h2>
+                <p>Manage service agreements, renewal deadlines and contract continuity.</p>
+            </div>
+            <a href="#contract-details" class="primary-action">
+                <i class="fa-solid fa-file-signature"></i> View Contracts
+            </a>
+        </section>
+
+        <section class="stats-grid renewal-stats">
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-purple">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </span>
+                    <span class="stat-status">Current</span>
+                </div>
+                <p class="stat-label">Active Contracts</p>
+                <div class="stat-value">08</div>
+                <p class="stat-note">Currently active service agreements</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-gold">
+                        <i class="fa-regular fa-calendar"></i>
+                    </span>
+                    <span class="stat-neutral">Next 30 days</span>
+                </div>
+                <p class="stat-label">Upcoming Renewals</p>
+                <div class="stat-value">03</div>
+                <p class="stat-note">Contracts approaching renewal</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-blue">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </span>
+                    <span class="stat-status">In review</span>
+                </div>
+                <p class="stat-label">Pending Approvals</p>
+                <div class="stat-value">02</div>
+                <p class="stat-note">Awaiting renewal confirmation</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-green">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </span>
+                    <span class="stat-trend">Up to date</span>
+                </div>
+                <p class="stat-label">Renewed This Year</p>
+                <div class="stat-value">05</div>
+                <p class="stat-note">Successfully renewed agreements</p>
+            </article>
+
+        </section>
+
+        <!-- SECTION 2: CONTRACT DETAILS -->
+        <section class="panel contract-details-panel" id="contract-details">
+
+            <div class="panel-heading">
+                <div>
+                    <p class="section-eyebrow">SERVICE AGREEMENTS</p>
+                    <h3>Contract Details</h3>
+                </div>
+                <span class="schedule-count">
+                    <i class="fa-solid fa-folder-open"></i> Contract register
+                </span>
+            </div>
+
+            <div class="contract-table-wrap">
+                <table class="contract-table">
+                    <thead>
+                        <tr>
+                            <th>Contract</th>
+                            <th>Service Plan</th>
+                            <th>Start Date</th>
+                            <th>Renewal Date</th>
+                            <th>Annual Value</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>VL-CON-201</strong>
+                                <small class="contract-subtext">Main Hotel</small>
+                            </td>
+                            <td>Premium Linen Care</td>
+                            <td>01 Jan 2026</td>
+                            <td>01 Nov 2026</td>
+                            <td class="contract-value">₹2,40,000</td>
+                            <td><span class="contract-status contract-active">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>VL-CON-202</strong>
+                                <small class="contract-subtext">City Hospital</small>
+                            </td>
+                            <td>Healthcare Linen</td>
+                            <td>15 Feb 2026</td>
+                            <td>25 Oct 2026</td>
+                            <td class="contract-value">₹3,60,000</td>
+                            <td><span class="contract-status contract-review">In Review</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>VL-CON-203</strong>
+                                <small class="contract-subtext">Business Hotel</small>
+                            </td>
+                            <td>Standard Linen Care</td>
+                            <td>01 Mar 2026</td>
+                            <td>15 Nov 2026</td>
+                            <td class="contract-value">₹1,80,000</td>
+                            <td><span class="contract-status contract-active">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>VL-CON-204</strong>
+                                <small class="contract-subtext">Central Clinic</small>
+                            </td>
+                            <td>Healthcare Linen</td>
+                            <td>01 Apr 2025</td>
+                            <td>20 Oct 2026</td>
+                            <td class="contract-value">₹2,10,000</td>
+                            <td><span class="contract-status contract-due">Renewal Due</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>VL-CON-205</strong>
+                                <small class="contract-subtext">Grand Residency</small>
+                            </td>
+                            <td>Premium Linen Care</td>
+                            <td>01 Jun 2026</td>
+                            <td>01 Jun 2027</td>
+                            <td class="contract-value">₹2,75,000</td>
+                            <td><span class="contract-status contract-active">Active</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- SECTION 3: RENEWAL TIMELINE & ACTIVITY -->
+        <section class="panel renewal-activity-panel">
+
+            <div class="panel-heading">
+                <div>
+                    <p class="section-eyebrow">UPCOMING DEADLINES</p>
+                    <h3>Renewal Timeline &amp; Activity</h3>
+                </div>
+                <span class="history-label">
+                    <i class="fa-regular fa-clock"></i> Renewal tracker
+                </span>
+            </div>
+
+            <div class="renewal-timeline">
+
+                <article class="renewal-timeline-item">
+                    <div class="renewal-date-box renewal-date-urgent">
+                        <strong>20</strong>
+                        <span>OCT</span>
+                    </div>
+
+                    <div class="renewal-item-info">
+                        <strong>Central Clinic — VL-CON-204</strong>
+                        <p>Healthcare Linen contract renewal deadline</p>
+                        <small><i class="fa-regular fa-bell"></i> Renewal confirmation required</small>
+                    </div>
+
+                    <span class="contract-status contract-due">Due Soon</span>
+                </article>
+
+                <article class="renewal-timeline-item">
+                    <div class="renewal-date-box">
+                        <strong>25</strong>
+                        <span>OCT</span>
+                    </div>
+
+                    <div class="renewal-item-info">
+                        <strong>City Hospital — VL-CON-202</strong>
+                        <p>Healthcare Linen agreement awaiting review</p>
+                        <small><i class="fa-regular fa-bell"></i> Follow up on approval</small>
+                    </div>
+
+                    <span class="contract-status contract-review">In Review</span>
+                </article>
+
+                <article class="renewal-timeline-item">
+                    <div class="renewal-date-box">
+                        <strong>01</strong>
+                        <span>NOV</span>
+                    </div>
+
+                    <div class="renewal-item-info">
+                        <strong>Main Hotel — VL-CON-201</strong>
+                        <p>Premium Linen Care contract renewal</p>
+                        <small><i class="fa-regular fa-bell"></i> Prepare renewal documents</small>
+                    </div>
+
+                    <span class="contract-status contract-upcoming">Upcoming</span>
+                </article>
+
+                <article class="renewal-timeline-item">
+                    <div class="renewal-date-box">
+                        <strong>15</strong>
+                        <span>NOV</span>
+                    </div>
+
+                    <div class="renewal-item-info">
+                        <strong>Business Hotel — VL-CON-203</strong>
+                        <p>Standard Linen Care agreement renewal</p>
+                        <small><i class="fa-regular fa-bell"></i> Review service requirements</small>
+                    </div>
+
+                    <span class="contract-status contract-upcoming">Upcoming</span>
+                </article>
+
+            </div>
+
+            <div class="renewal-note">
+                <i class="fa-solid fa-circle-info"></i>
+                <p>Review upcoming contract deadlines in advance to avoid service interruptions.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <div class="modal-backdrop" data-logout-modal hidden>
+        <section class="confirm-card" role="dialog" aria-modal="true" aria-labelledby="logout-title"
+            aria-describedby="logout-copy">
+            <span class="confirm-icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+            <h2 id="logout-title">Log out of your account?</h2>
+            <p id="logout-copy">Are you sure you want to leave your client dashboard?</p>
+            <div class="confirm-actions"><button class="cancel-button" type="button" data-logout-cancel>No,
+                    stay</button><button class="confirm-logout" type="button" data-logout-confirm>Yes, log out</button>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

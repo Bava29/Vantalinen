@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VantaLinen</title>
+
+    <meta name="description"
+        content="Reliable commercial laundry and linen management services for hotels, hospitals, resorts and businesses.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+     VANTALINEN HEADER
+========================= -->
+
+    <header class="vl-header" id="siteHeader">
+        <div class="vl-header-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="vl-logo" aria-label="VantaLinen Home">
+                <img src="images/logo.png" alt="VantaLinen Commercial Laundry Services">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="vl-navigation" id="mainNavigation" aria-label="Main navigation">
+
+                <ul class="vl-nav-list">
+                    <li><a href="index.html">Home 1</a></li>
+                    <li><a href="home-2.html">Home 2</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="industries-served.html">Industries Served</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+
+                <!-- Mobile / Tablet Controls -->
+                <div class="vl-mobile-controls">
+
+                    <button class="vl-toggle-btn" id="mobileThemeToggle" type="button" aria-label="Toggle dark mode">
+                        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                        <span>Dark Mode</span>
+                    </button>
+
+                    <button class="vl-toggle-btn" id="mobileRtlToggle" type="button" aria-label="Toggle RTL layout">
+                        <i class="fa-solid fa-right-left" aria-hidden="true"></i>
+                        <span>RTL Mode</span>
+                    </button>
+
+                    <a href="login.html" class="vl-login-btn">
+                        <i class="fa-regular fa-user" aria-hidden="true"></i>
+                        <span>Login</span>
+                    </a>
+
+                </div>
+            </nav>
+
+            <!-- Desktop Right Actions -->
+            <div class="vl-header-actions">
+
+                <button class="vl-icon-btn" id="desktopThemeToggle" type="button" aria-label="Toggle dark mode"
+                    title="Dark Mode">
+                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                </button>
+
+                <button class="vl-icon-btn" id="desktopRtlToggle" type="button" aria-label="Toggle RTL layout"
+                    title="RTL Mode">
+                    <i class="fa-solid fa-right-left" aria-hidden="true"></i>
+                </button>
+
+                <a href="login.html" class="vl-login-btn">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
+                    <span>Login</span>
+                </a>
+
+            </div>
+
+            <!-- Mobile / Tablet Menu Toggle -->
+            <button class="vl-menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu"
+                aria-controls="mainNavigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- VantaLinen Inner Page Hero -->
+    <section class="vl-page-hero services-banner">
+        <div class="vl-page-hero-overlay"></div>
+
+        <div class="vl-page-hero-content">
+            <span class="vl-page-hero-label">
+                COMMERCIAL LAUNDRY SERVICES
+            </span>
+
+            <h1>Our Services</h1>
+
+            <p>
+                Reliable commercial laundry solutions for hotels, hospitals and businesses that depend on clean, fresh
+                and professionally cared-for linens every day.
+            </p>
+        </div>
+    </section>
+
+    <section class="vl-services-overview" id="our-services">
+        <div class="vl-services-container">
+
+            <div class="vl-services-heading">
+                <span class="vl-services-eyebrow">WHAT WE OFFER</span>
+
+                <h2>Complete Laundry Care for Your Business</h2>
+
+                <p>
+                    From everyday hotel linens to specialist fabric care,
+                    our services help your business maintain clean,
+                    fresh and professionally presented textiles.
+                </p>
+            </div>
+
+            <div class="vl-services-grid">
+
+                <!-- Service 1 -->
+                <article class="vl-service-card">
+                    <div class="vl-service-image">
+                        <img src="images/service-hotel-linen.jpg" alt="Freshly cleaned hotel bed linen and towels">
+                    </div>
+
+                    <div class="vl-service-content">
+                        <span class="vl-service-number">01</span>
+
+                        <h3>Hotel Linen Care</h3>
+
+                        <p>
+                            More professional cleaning and finishing for bed
+                            sheets, pillowcases, towels and everyday
+                            hospitality linen.
+                        </p>
+
+                        <a href="contact.html" class="vl-service-link">
+                            Discuss This Service
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Service 2 -->
+                <article class="vl-service-card">
+                    <div class="vl-service-image">
+                        <img src="images/service-hospital-linen.jpg" alt="Clean folded hospital linen">
+                    </div>
+
+                    <div class="vl-service-content">
+                        <span class="vl-service-number">02</span>
+
+                        <h3>Hospital Linen Care</h3>
+
+                        <p>
+                            Linen care designed around healthcare
+                            requirements, with hygiene-focused processing
+                            and careful handling.
+                        </p>
+
+                        <a href="contact.html" class="vl-service-link">
+                            Discuss This Service
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Service 3 -->
+                <article class="vl-service-card">
+                    <div class="vl-service-image">
+                        <img src="images/service-uniform-laundry.jpg" alt="Clean professional uniforms ready for use">
+                    </div>
+
+                    <div class="vl-service-content">
+                        <span class="vl-service-number">03</span>
+
+                        <h3>Uniform Laundry</h3>
+
+                        <p>
+                            Keep staff uniforms clean, fresh and ready
+                            for daily use with dependable commercial
+                            laundry support.
+                        </p>
+
+                        <a href="contact.html" class="vl-service-link">
+                            Discuss This Service
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Service 4 -->
+                <article class="vl-service-card">
+                    <div class="vl-service-image">
+                        <img src="images/service-specialty-fabric.jpg" alt="Delicately arranged specialty fabrics">
+                    </div>
+
+                    <div class="vl-service-content">
+                        <span class="vl-service-number">04</span>
+
+                        <h3>Specialty Fabric Care</h3>
+
+                        <p>
+                            Careful handling for selected specialty
+                            textiles, based on fabric type and
+                            appropriate cleaning requirements.
+                        </p>
+
+                        <a href="contact.html" class="vl-service-link">
+                            Discuss This Service
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+     SECTION 3: HOW OUR SERVICE WORKS
+========================================== -->
+
+    <section class="vl-service-process" id="service-process">
+        <div class="vl-process-container">
+
+            <div class="vl-process-heading">
+                <span class="vl-process-eyebrow">OUR PROCESS</span>
+
+                <h2>Simple, Reliable Laundry Care.</h2>
+
+                <p>
+                    From scheduled collection to delivery-ready linen,
+                    our process is designed to make commercial laundry
+                    easier to manage for your business.
+                </p>
+            </div>
+
+            <div class="vl-process-grid">
+
+                <!-- Step 1 -->
+                <article class="vl-process-step">
+                    <div class="vl-process-top">
+                        <span class="vl-process-number">01</span>
+                        <span class="vl-process-icon">
+                            <i class="fa-solid fa-truck"></i>
+                        </span>
+                    </div>
+
+                    <div class="vl-process-line"></div>
+
+                    <h3>Scheduling</h3>
+
+                    <p>
+                        We coordinate collection schedules around your
+                        business requirements and linen volumes.
+                    </p>
+                </article>
+
+                <!-- Step 2 -->
+                <article class="vl-process-step">
+                    <div class="vl-process-top">
+                        <span class="vl-process-number">02</span>
+                        <span class="vl-process-icon">
+                            <i class="fa-solid fa-soap"></i>
+                        </span>
+                    </div>
+
+                    <div class="vl-process-line"></div>
+
+                    <h3>Professional Cleaning</h3>
+
+                    <p>
+                        Each load receives appropriate care according
+                        to the fabric type and cleaning requirements.
+                    </p>
+                </article>
+
+                <!-- Step 3 -->
+                <article class="vl-process-step">
+                    <div class="vl-process-top">
+                        <span class="vl-process-number">03</span>
+                        <span class="vl-process-icon">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                        </span>
+                    </div>
+
+                    <div class="vl-process-line"></div>
+
+                    <h3>Quality Inspection</h3>
+
+                    <p>
+                        Cleaned items are checked for cleanliness,
+                        presentation and agreed quality standards.
+                    </p>
+                </article>
+
+                <!-- Step 4 -->
+                <article class="vl-process-step">
+                    <div class="vl-process-top">
+                        <span class="vl-process-number">04</span>
+                        <span class="vl-process-icon">
+                            <i class="fa-solid fa-box"></i>
+                        </span>
+                    </div>
+
+                    <div class="vl-process-line"></div>
+
+                    <h3>Delivery Ready</h3>
+
+                    <p>
+                        Linen is organized and prepared for delivery
+                        according to the agreed service schedule.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="vl-process-note">
+                <i class="fa-solid fa-circle-info"></i>
+                <p>
+                    Need a recurring pickup plan?
+                    <a href="contact.html">Discuss your requirements with us.</a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+     SECTION 4: OUR QUALITY STANDARDS
+========================================== -->
+
+    <section class="vl-quality-standards" id="quality-standards">
+        <div class="vl-quality-container">
+
+            <!-- Left Image -->
+            <div class="vl-quality-visual">
+                <img src="images/service-quality-standards-2.jpg"
+                    alt="Clean folded hotel linen prepared for quality inspection" loading="lazy">
+
+                <div class="vl-quality-image-caption">
+                    <span class="vl-quality-caption-line"></span>
+                    <p>Care in Every Detail</p>
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="vl-quality-content">
+
+                <span class="vl-quality-eyebrow">
+                    OUR QUALITY COMMITMENT
+                </span>
+
+                <h2>
+                    Quality You Can See.
+                    <span>Care You Can Trust.</span>
+                </h2>
+
+                <p class="vl-quality-intro">
+                    Commercial laundry is about more than clean fabric.
+                    It's about consistent presentation, appropriate
+                    handling and dependable care for the textiles
+                    your business relies on.
+                </p>
+
+                <div class="vl-quality-list">
+
+                    <!-- Point 1 -->
+                    <article class="vl-quality-item">
+                        <span class="vl-quality-index">01</span>
+
+                        <div class="vl-quality-item-content">
+                            <h3>Fabric-Conscious Care</h3>
+                            <p>
+                                Cleaning methods selected according to
+                                fabric type and care requirements.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Point 2 -->
+                    <article class="vl-quality-item">
+                        <span class="vl-quality-index">02</span>
+
+                        <div class="vl-quality-item-content">
+                            <h3>Hygiene-Focused Processing</h3>
+                            <p>
+                                Appropriate handling and cleaning
+                                procedures suited to the service needs.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Point 3 -->
+                    <article class="vl-quality-item">
+                        <span class="vl-quality-index">03</span>
+
+                        <div class="vl-quality-item-content">
+                            <h3>Consistent Finishing</h3>
+                            <p>
+                                Attention to neatness and presentation
+                                for linen ready for business use.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Point 4 -->
+                    <article class="vl-quality-item">
+                        <span class="vl-quality-index">04</span>
+
+                        <div class="vl-quality-item-content">
+                            <h3>Quality Checks</h3>
+                            <p>
+                                Inspection against applicable cleanliness,
+                                finishing and service requirements.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <a href="contact.html" class="vl-quality-cta">
+                    Discuss Your Requirements
+                    <span aria-hidden="true">↗</span>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+     SECTION 5: BUSINESS SOLUTIONS
+========================================== -->
+
+    <section class="vl-business-solutions" id="business-solutions">
+        <div class="vl-business-container">
+
+            <div class="vl-business-heading">
+                <span class="vl-business-eyebrow">
+                    WHO WE SERVE
+                </span>
+
+                <h2>
+                    Laundry Solutions Built Around Your Business.
+                </h2>
+
+                <p>
+                    Every industry has different linen demands.
+                    We help businesses manage their laundry needs
+                    with practical, professional service solutions.
+                </p>
+            </div>
+
+            <div class="vl-business-grid">
+
+                <!-- Hotels -->
+                <article class="vl-business-card">
+                    <div class="vl-business-image">
+                        <img src="images/solution-hotels.jpg" alt="Fresh white linen prepared for hotel guest rooms"
+                            loading="lazy">
+
+                        <span class="vl-business-number">01</span>
+                    </div>
+
+                    <div class="vl-business-content">
+                        <span class="vl-business-category">
+                            HOSPITALITY
+                        </span>
+
+                        <h3>Hotels & Resorts</h3>
+
+                        <p>
+                            Keep guest rooms and hospitality spaces
+                            ready with professional care for bed linen,
+                            towels and other washable textiles.
+                        </p>
+
+                        <a href="contact.html" class="vl-business-link">
+                            Explore Hotel Solutions
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Hospitals -->
+                <article class="vl-business-card">
+                    <div class="vl-business-image">
+                        <img src="images/solution-hospitals.jpg" alt="Organized clean linen in a healthcare environment"
+                            loading="lazy">
+
+                        <span class="vl-business-number">02</span>
+                    </div>
+
+                    <div class="vl-business-content">
+                        <span class="vl-business-category">
+                            HEALTHCARE
+                        </span>
+
+                        <h3>Hospitals & Clinics</h3>
+
+                        <p>
+                            Support day-to-day linen requirements with
+                            appropriate cleaning, careful handling and
+                            service coordination for healthcare settings.
+                        </p>
+
+                        <a href="contact.html" class="vl-business-link">
+                            Explore Healthcare Solutions
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Commercial businesses -->
+                <article class="vl-business-card">
+                    <div class="vl-business-image">
+                        <img src="images/solution-commercial.jpg" alt="Clean work uniforms and commercial textiles"
+                            loading="lazy">
+
+                        <span class="vl-business-number">03</span>
+                    </div>
+
+                    <div class="vl-business-content">
+                        <span class="vl-business-category">
+                            BUSINESS SERVICES
+                        </span>
+
+                        <h3>Commercial Businesses</h3>
+
+                        <p>
+                            Manage all uniforms, reusable textiles and
+                            recurring laundry needs with a service
+                            approach suited to your operations.
+                        </p>
+
+                        <a href="contact.html" class="vl-business-link">
+                            Explore Business Solutions
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="vl-business-footer">
+                <p>
+                    Have a specific laundry requirement?
+                    Let's find the right approach for your business.
+                </p>
+
+                <a href="contact.html" class="vl-business-cta">
+                    Discuss Your Requirements
+                    <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+     SECTION 6: FLEXIBLE SERVICE & SCHEDULING
+========================================== -->
+
+    <section class="vl-service-flexibility" id="service-flexibility">
+        <div class="vl-flexibility-container">
+
+            <!-- Left Content -->
+            <div class="vl-flexibility-content">
+
+                <span class="vl-flexibility-eyebrow">
+                    SERVICE THAT FITS YOUR BUSINESS
+                </span>
+
+                <h2>
+                    Your Laundry Needs.
+                    <span>Your Schedule.</span>
+                </h2>
+
+                <p class="vl-flexibility-intro">
+                    Laundry demands can change from day to day.
+                    We work with your business to understand linen
+                    volumes, collection needs and delivery expectations
+                    so service planning fits your operations.
+                </p>
+
+                <div class="vl-flexibility-features">
+
+                    <!-- Feature 1 -->
+                    <div class="vl-flexibility-feature">
+                        <span class="vl-flexibility-icon">
+                            <i class="fa-regular fa-calendar-check"></i>
+                        </span>
+
+                        <div>
+                            <h3>Recurring Collection Planning</h3>
+                            <p>
+                                Discuss a regular pickup schedule that
+                                works with your business routine.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="vl-flexibility-feature">
+                        <span class="vl-flexibility-icon">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </span>
+
+                        <div>
+                            <h3>Linen Volume Coordination</h3>
+                            <p>
+                                Plan service requirements around the
+                                type and volume of linen you handle.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="vl-flexibility-feature">
+                        <span class="vl-flexibility-icon">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </span>
+
+                        <div>
+                            <h3>Delivery Coordination</h3>
+                            <p>
+                                Coordinate delivery expectations and
+                                service details with your team.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="contact.html" class="vl-flexibility-cta">
+                    Plan Your Laundry Service
+                    <span aria-hidden="true">↗</span>
+                </a>
+
+            </div>
+
+            <!-- Right Image -->
+            <div class="vl-flexibility-visual">
+
+                <img src="images/service-flexible-scheduling.jpg"
+                    alt="Organized clean linen ready for commercial laundry delivery" loading="lazy">
+
+                <div class="vl-flexibility-image-label">
+                    <span class="vl-flexibility-label-line"></span>
+                    <p>Reliable Care. Thoughtful Planning.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+     SECTION 7: FINAL CTA
+========================================== -->
+
+    <section class="vl-services-final-cta" id="services-contact">
+
+        <div class="vl-services-cta-background">
+            <img src="images/services-final-cta.jpg" alt="" aria-hidden="true" loading="lazy">
+        </div>
+
+        <div class="vl-services-cta-overlay"></div>
+
+        <div class="vl-services-cta-content">
+
+            <span class="vl-services-cta-eyebrow">
+                YOUR BUSINESS. OUR COMMITMENT.
+            </span>
+
+            <h2>
+                Ready for a Better
+                <span>Laundry Partnership?</span>
+            </h2>
+
+            <p>
+                Let's discuss your linen requirements, collection
+                schedule and service needs to find the right
+                commercial laundry solution for your business.
+            </p>
+
+            <div class="vl-services-cta-actions">
+
+                <a href="contact.html" class="vl-services-cta-primary">
+                    Discuss Your Requirements
+                    <span aria-hidden="true">↗</span>
+                </a>
+
+                <a href="about.html" class="vl-services-cta-secondary">
+                    Discover VantaLinen
+                </a>
+
+            </div>
+
+            <div class="vl-services-cta-bottom">
+                <span class="vl-services-cta-line"></span>
+                <span>VANTALINEN</span>
+                <span class="vl-services-cta-line"></span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- VantaLinen Footer -->
+    <footer class="vl-footer">
+        <div class="vl-footer-container">
+
+            <!-- Brand -->
+            <div class="vl-footer-brand">
+                <a href="index.html" class="vl-footer-logo">
+                    <img src="images/logo-white.png" alt="VantaLinen Commercial Laundry Services">
+                </a>
+
+                <p>
+                    Precision in Every Linen. Reliable commercial laundry
+                    solutions designed for hotels, hospitals and businesses.
+                </p>
+
+                <div class="vl-footer-socials">
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="vl-footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home 1</a></li>
+                    <li><a href="home-2.html">Home 2</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="industries-served.html">Industries Served</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Client Services -->
+            <div class="vl-footer-column">
+                <h3>Client Services</h3>
+                <ul>
+                    <li><a href="dashboard.html">Client Dashboard</a></li>
+                    <li><a href="d2.html">Pickup &amp; Delivery</a></li>
+                    <li><a href="d3.html">Linen Inventory</a></li>
+                    <li><a href="d4.html">Service Invoices</a></li>
+                    <li><a href="d5.html">Contract Renewals</a></li>
+                    <li><a href="d6.html">Service Requests</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="vl-footer-column vl-footer-contact">
+                <h3>Contact Us</h3>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+910000000000">+91 98765 43210</a>
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:info@vantalinen.com">
+                        info@vantalinen.com
+                    </a>
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-clock"></i>
+                    Monday – Saturday<br>
+                    9:00 AM – 6:00 PM
+                </p>
+
+                <a href="contact.html" class="vl-footer-cta">
+                    Contact Our Team
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="vl-footer-bottom">
+            <p>
+                &copy; <span id="vl-footer-year"></span> VantaLinen.
+                All rights reserved.
+            </p>
+
+            <div class="vl-footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms &amp; Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f3ee">
+    <title>VantaLinen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/dashboard.js" defer></script>
+</head>
+
+<body>
+    <div class="dashboard-overlay" data-sidebar-overlay></div>
+    <aside class="sidebar" id="dashboardSidebar" aria-label="Dashboard navigation">
+        <a class="sidebar-brand" href="index.html" aria-label="VantaLinen home"><img src="images/logo-white.png"
+                alt="VantaLinen"></a>
+        <div class="sidebar-label">WORKSPACE</div>
+        <nav class="sidebar-nav">
+            <a class="nav-item" href="dashboard.html" aria-current="page"><i
+                    class="fa-solid fa-chart-pie"></i><span>Overview</span></a>
+            <a class="nav-item" href="d2.html"><i class="fa-solid fa-truck-fast"></i><span>Pickups &amp;
+                    deliveries</span><span class="nav-count">2</span></a>
+            <a class="nav-item" href="d3.html"><i class="fa-solid fa-boxes-stacked"></i><span>Linen
+                    inventory</span></a>
+            <a class="nav-item" href="d4.html"><i class="fa-regular fa-file-lines"></i><span>Service
+                    Invoices</span></a>
+            <a class="nav-item" href="d5.html"><i class="fas fa-file-signature"></i><span>Contract Renewals</span></a>
+            <a class="nav-item active" href="d6.html"><i class="fa-regular fa-message"></i><span>Service
+                    requests</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <button class="logout-button" type="button" data-logout-open><i
+                    class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></button>
+
+        </div>
+    </aside>
+
+    <header class="topbar">
+        <div class="topbar-start">
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+                aria-controls="dashboardSidebar" data-menu-toggle><span></span><span></span><span></span></button>
+            <div>
+                <p class="topbar-kicker">CLIENT PORTAL</p>
+                <h1>Service Requests</h1>
+            </div>
+        </div>
+        <div class="topbar-actions">
+            <button class="header-icon" type="button" data-theme-toggle aria-label="Switch to dark mode"
+                title="Dark Mode"><i class="fa-solid fa-moon"></i></button>
+            <button class="header-icon" type="button" data-dir-toggle aria-label="Switch to RTL layout"
+                title="RTL Mode"><i class="fa-solid fa-right-left"></i></button>
+            <div class="notification-wrap">
+                <button class="header-icon notification-button" type="button" aria-label="Notifications, 3 unread"
+                    aria-expanded="false" data-notification-toggle><i class="fa-regular fa-bell"></i><span
+                        class="notification-badge">3</span></button>
+                <div class="notification-popover" data-notification-popover hidden>
+                    <div class="popover-heading"><strong>Notifications</strong><span>3 new</span></div>
+                    <a class="notification-item" href="d2.html"><span class="notice-dot"></span><span><strong>Pickup
+                                scheduled</strong><small>Your next collection is tomorrow at 9:00 AM.</small><time>10
+                                min ago</time></span></a>
+                    <a class="notification-item" href="d4.html"><span
+                            class="notice-dot notice-blue"></span><span><strong>Invoice ready</strong><small>Invoice
+                                VL-2026-014 is ready to review.</small><time>2 hours ago</time></span></a>
+                    <a class="notification-item" href="d6.html"><span
+                            class="notice-dot notice-gold"></span><span><strong>Request updated</strong><small>Your
+                                service request has been received.</small><time>Yesterday</time></span></a>
+                    <a class="all-notifications" href="d6.html">View all notifications <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <button class="profile-button" type="button" data-profile-button aria-label="Open client profile">
+                <span class="avatar"><img src="images/client-profile.jpg" alt=""></span><span
+                    class="profile-copy"><strong>Arun Raj</strong><small>Hotel
+                        administrator</small></span>
+            </button>
+        </div>
+    </header>
+
+
+    <main class="dashboard-main">
+
+        <!-- SECTION 1: REQUEST OVERVIEW -->
+        <section class="welcome-row">
+            <div>
+                <p class="section-eyebrow">CUSTOMER SERVICE CENTER</p>
+                <h2>Service Requests</h2>
+                <p>Raise service requests and track your linen service issues and updates.</p>
+            </div>
+            <a href="#request-list" class="primary-action">
+                <i class="fa-solid fa-plus"></i> New Request
+            </a>
+        </section>
+
+        <section class="stats-grid request-stats">
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-purple">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </span>
+                    <span class="stat-status">All requests</span>
+                </div>
+                <p class="stat-label">Total Requests</p>
+                <div class="stat-value">24</div>
+                <p class="stat-note">Requests submitted this month</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-gold">
+                        <i class="fa-regular fa-clock"></i>
+                    </span>
+                    <span class="stat-neutral">Awaiting action</span>
+                </div>
+                <p class="stat-label">Pending Requests</p>
+                <div class="stat-value">05</div>
+                <p class="stat-note">Waiting for service confirmation</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-blue">
+                        <i class="fa-solid fa-gears"></i>
+                    </span>
+                    <span class="stat-neutral">Processing</span>
+                </div>
+                <p class="stat-label">In Progress</p>
+                <div class="stat-value">07</div>
+                <p class="stat-note">Currently being handled</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon stat-green">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </span>
+                    <span class="stat-trend">Resolved</span>
+                </div>
+                <p class="stat-label">Completed Requests</p>
+                <div class="stat-value">12</div>
+                <p class="stat-note">Completed this month</p>
+            </article>
+
+        </section>
+
+        <!-- SECTION 2: SERVICE REQUEST LIST -->
+        <section class="panel service-request-panel" id="request-list">
+
+            <div class="panel-heading">
+                <div>
+                    <p class="section-eyebrow">REQUEST MANAGEMENT</p>
+                    <h3>My Service Requests</h3>
+                </div>
+                <span class="schedule-count">
+                    <i class="fa-solid fa-list-check"></i> Recent requests
+                </span>
+            </div>
+
+            <div class="request-table-wrap">
+                <table class="request-table">
+                    <thead>
+                        <tr>
+                            <th>Request ID</th>
+                            <th>Service Type</th>
+                            <th>Submitted</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>VL-SR-3024</strong>
+                                <small class="request-subtext">Linen shortage</small>
+                            </td>
+                            <td>Extra Linen Delivery</td>
+                            <td>16 Oct 2026</td>
+                            <td><span class="request-priority priority-high">High</span></td>
+                            <td><span class="request-status request-progress">In Progress</span></td>
+                            <td><a href="#request-activity" class="request-view-link">View</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>VL-SR-3023</strong>
+                                <small class="request-subtext">Collection schedule</small>
+                            </td>
+                            <td>Pickup Rescheduling</td>
+                            <td>15 Oct 2026</td>
+                            <td><span class="request-priority priority-medium">Medium</span></td>
+                            <td><span class="request-status request-pending">Pending</span></td>
+                            <td><a href="#request-activity" class="request-view-link">View</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>VL-SR-3022</strong>
+                                <small class="request-subtext">Quality concern</small>
+                            </td>
+                            <td>Linen Quality Issue</td>
+                            <td>14 Oct 2026</td>
+                            <td><span class="request-priority priority-high">High</span></td>
+                            <td><span class="request-status request-pending">Pending</span></td>
+                            <td><a href="#request-activity" class="request-view-link">View</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>VL-SR-3021</strong>
+                                <small class="request-subtext">Billing clarification</small>
+                            </td>
+                            <td>Invoice Assistance</td>
+                            <td>12 Oct 2026</td>
+                            <td><span class="request-priority priority-low">Low</span></td>
+                            <td><span class="request-status request-completed">Completed</span></td>
+                            <td><a href="#request-activity" class="request-view-link">View</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>VL-SR-3020</strong>
+                                <small class="request-subtext">Additional service</small>
+                            </td>
+                            <td>Special Linen Cleaning</td>
+                            <td>10 Oct 2026</td>
+                            <td><span class="request-priority priority-medium">Medium</span></td>
+                            <td><span class="request-status request-completed">Completed</span></td>
+                            <td><a href="#request-activity" class="request-view-link">View</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- SECTION 3: RECENT REQUEST ACTIVITY -->
+        <section class="panel request-activity-panel" id="request-activity">
+
+            <div class="panel-heading">
+                <div>
+                    <p class="section-eyebrow">SERVICE UPDATES</p>
+                    <h3>Recent Request Activity</h3>
+                </div>
+                <span class="history-label">
+                    <i class="fa-solid fa-clock-rotate-left"></i> Latest updates
+                </span>
+            </div>
+
+            <div class="request-activity-list">
+
+                <article class="request-activity-item">
+                    <span class="request-activity-icon request-icon-progress">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </span>
+
+                    <div class="request-activity-info">
+                        <strong>Extra Linen Delivery — VL-SR-3024</strong>
+                        <p>Your additional linen delivery request is being processed.</p>
+                        <small>16 Oct 2026 · 10:30 AM</small>
+                    </div>
+
+                    <span class="request-status request-progress">In Progress</span>
+                </article>
+
+                <article class="request-activity-item">
+                    <span class="request-activity-icon request-icon-pending">
+                        <i class="fa-regular fa-calendar-check"></i>
+                    </span>
+
+                    <div class="request-activity-info">
+                        <strong>Pickup Rescheduling — VL-SR-3023</strong>
+                        <p>Your revised pickup schedule is awaiting confirmation.</p>
+                        <small>15 Oct 2026 · 02:15 PM</small>
+                    </div>
+
+                    <span class="request-status request-pending">Pending</span>
+                </article>
+
+                <article class="request-activity-item">
+                    <span class="request-activity-icon request-icon-completed">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                    <div class="request-activity-info">
+                        <strong>Invoice Assistance — VL-SR-3021</strong>
+                        <p>Your invoice clarification request has been resolved.</p>
+                        <small>13 Oct 2026 · 11:20 AM</small>
+                    </div>
+
+                    <span class="request-status request-completed">Completed</span>
+                </article>
+
+                <article class="request-activity-item">
+                    <span class="request-activity-icon request-icon-pending">
+                        <i class="fa-solid fa-shirt"></i>
+                    </span>
+
+                    <div class="request-activity-info">
+                        <strong>Linen Quality Issue — VL-SR-3022</strong>
+                        <p>Your quality concern has been logged for review.</p>
+                        <small>14 Oct 2026 · 09:45 AM</small>
+                    </div>
+
+                    <span class="request-status request-pending">Pending</span>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <div class="modal-backdrop" data-logout-modal hidden>
+        <section class="confirm-card" role="dialog" aria-modal="true" aria-labelledby="logout-title"
+            aria-describedby="logout-copy">
+            <span class="confirm-icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+            <h2 id="logout-title">Log out of your account?</h2>
+            <p id="logout-copy">Are you sure you want to leave your client dashboard?</p>
+            <div class="confirm-actions"><button class="cancel-button" type="button" data-logout-cancel>No,
+                    stay</button><button class="confirm-logout" type="button" data-logout-confirm>Yes, log out</button>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

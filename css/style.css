@@ -6035,6 +6035,780 @@ html[dir="rtl"] .vl-about-story-link:hover i {
 
 
 /* ==========================================
+   ABOUT PAGE - OUR JOURNEY TIMELINE
+========================================== */
+
+.vl-about-journey {
+    --journey-bg: #F0EDE4;
+    --journey-text: #302335;
+    --journey-border: rgba(48, 35, 53, 0.18);
+    --journey-muted: #716774;
+
+    padding: 80px 5%;
+    color: var(--journey-text);
+    background: var(--journey-bg);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.vl-about-journey-container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Heading */
+
+.vl-about-journey-heading {
+    max-width: 760px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.vl-about-journey-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--journey-text);
+}
+
+.vl-about-journey-heading h2 {
+    margin-bottom: 20px;
+    font-family: var(--heading-font);
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--journey-text);
+}
+
+.vl-about-journey-heading h2 span {
+    color: var(--journey-muted);
+}
+
+.vl-about-journey-heading p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--journey-muted);
+}
+
+/* Timeline layout */
+
+.vl-about-journey-timeline {
+    --journey-timeline-gap: 24px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--journey-timeline-gap);
+}
+
+.vl-about-journey-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.vl-about-journey-item:not(:last-child)::after,
+html[dir="rtl"] .vl-about-journey-item:not(:first-child)::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 24px;
+    left: calc(50% + 24px);
+    width: calc(100% - 24px);
+    height: 1px;
+    background: var(--journey-border);
+}
+
+/* Number marker */
+
+.vl-about-journey-marker {
+    position: relative;
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--journey-bg);
+    background: var(--journey-text);
+    border: 5px solid var(--journey-bg);
+    outline: 1px solid var(--journey-border);
+    border-radius: 50%;
+    font-family: var(--heading-font);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Timeline cards */
+
+.vl-about-journey-card {
+    flex: 1;
+    min-height: 245px;
+    padding: 24px 20px;
+    border: 1px solid var(--journey-border);
+    border-radius: 5px;
+    background: transparent;
+    transition: transform 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.vl-about-journey-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--journey-text);
+}
+
+.vl-about-journey-year {
+    display: block;
+    margin-bottom: 12px;
+    font-family: var(--heading-font);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--journey-text);
+}
+
+.vl-about-journey-label {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    color: var(--journey-muted);
+}
+
+.vl-about-journey-card h3 {
+    margin-bottom: 12px;
+    font-family: var(--heading-font);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.45;
+    color: var(--journey-text);
+}
+
+.vl-about-journey-card p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--journey-muted);
+}
+
+/* Footer note */
+
+.vl-about-journey-footer {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.vl-about-journey-footer-line {
+    width: 42px;
+    height: 1px;
+    flex-shrink: 0;
+    background: var(--journey-text);
+}
+
+.vl-about-journey-footer p {
+    font-size: 14px;
+    color: var(--journey-muted);
+}
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+html.dark-mode .vl-about-journey {
+    --journey-bg: #302335;
+    --journey-text: #F0EDE4;
+    --journey-border: rgba(240, 237, 228, 0.22);
+    --journey-muted: #D0C6D0;
+}
+
+html.dark-mode .vl-about-journey-marker {
+    border-color: var(--journey-bg);
+    outline-color: var(--journey-border);
+}
+
+/* ==========================================
+   RTL MODE
+========================================== */
+
+html[dir="rtl"] .vl-about-journey {
+    direction: rtl;
+}
+
+html[dir="rtl"] .vl-about-journey-timeline {
+    direction: rtl;
+}
+
+html[dir="rtl"] .vl-about-journey-item:first-child::after {
+    display: none;
+}
+
+/* ==========================================
+   TABLET - iPad Pro
+========================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .vl-about-journey {
+        padding: 75px 4%;
+    }
+
+    .vl-about-journey-timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+    .vl-about-journey-item::after,
+    html[dir="rtl"] .vl-about-journey-item::after {
+        display: none;
+    }
+
+    .vl-about-journey-heading {
+        margin-bottom: 48px;
+    }
+
+    .vl-about-journey-card {
+        min-height: 250px;
+    }
+}
+
+/* ==========================================
+   MOBILE & iPad Mini
+========================================== */
+
+@media (max-width: 768px) {
+    .vl-about-journey {
+        padding: 65px 5%;
+    }
+
+    .vl-about-journey-heading {
+        margin-bottom: 38px;
+    }
+
+    .vl-about-journey-heading h2 {
+        font-size: 34px;
+    }
+
+    .vl-about-journey-heading p {
+        font-size: 16px;
+    }
+
+    .vl-about-journey-timeline {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .vl-about-journey-item {
+        display: grid;
+        grid-template-columns: 52px minmax(0, 1fr);
+        align-items: start;
+        gap: 15px;
+    }
+
+    .vl-about-journey-item::after,
+    html[dir="rtl"] .vl-about-journey-item::after {
+        display: none;
+    }
+
+    .vl-about-journey-marker {
+        margin-bottom: 0;
+    }
+
+    .vl-about-journey-card {
+        min-height: auto;
+        padding: 24px 20px;
+    }
+
+    .vl-about-journey-year {
+        font-size: 28px;
+    }
+
+    .vl-about-journey-card h3 {
+        font-size: 19px;
+    }
+
+    .vl-about-journey-footer {
+        align-items: flex-start;
+        margin-top: 30px;
+    }
+
+    .vl-about-journey-footer p {
+        font-size: 14px;
+    }
+}
+
+/* Small mobile */
+
+@media (max-width: 480px) {
+    .vl-about-journey {
+        padding: 55px 5%;
+    }
+
+    .vl-about-journey-heading h2 {
+        font-size: 30px;
+    }
+
+    .vl-about-journey-item {
+        grid-template-columns: 44px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .vl-about-journey-marker {
+        width: 44px;
+        height: 44px;
+        font-size: 12px;
+    }
+
+    .vl-about-journey-card {
+        padding: 20px 17px;
+    }
+
+    .vl-about-journey-year {
+        font-size: 26px;
+    }
+}
+
+
+/* ==========================================
+   ABOUT PAGE - CENTERED STATS CARDS
+========================================== */
+
+.vl-about-stats {
+    --stats-bg: #F0EDE4;
+    --stats-card-bg: #F7F4EC;
+    --stats-text: #302335;
+    --stats-muted: #716774;
+    --stats-border: rgba(48, 35, 53, 0.18);
+    --stats-number-bg: rgba(48, 35, 53, 0.06);
+
+    padding: 85px 5%;
+    background: var(--stats-bg);
+    color: var(--stats-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.vl-about-stats,
+.vl-about-stats * {
+    box-sizing: border-box;
+}
+
+.vl-about-stats-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* SECTION HEADING */
+
+.vl-about-stats-heading {
+    max-width: 760px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.vl-about-stats-eyebrow {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    color: var(--stats-text);
+}
+
+.vl-about-stats-heading h2 {
+    margin: 0 0 18px;
+    font-family: var(--heading-font);
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--stats-text);
+}
+
+.vl-about-stats-heading h2 span {
+    color: var(--stats-muted);
+}
+
+.vl-about-stats-heading p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--stats-muted);
+}
+
+/* STATS GRID */
+
+.vl-about-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 18px;
+}
+
+/* INDIVIDUAL CARD */
+
+.vl-about-stat-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 0;
+    min-height: 280px;
+    padding: 27px 22px 24px;
+    overflow: hidden;
+    text-align: center;
+    background: var(--stats-card-bg);
+    border: 1px solid var(--stats-border);
+    border-radius: 5px;
+    transition: transform 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.vl-about-stat-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--stats-text);
+}
+
+/* SMALL CARD NUMBER */
+
+.vl-about-stat-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 17px;
+    border: 1px solid var(--stats-border);
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--stats-muted);
+}
+
+/* CENTERED STAT NUMBER */
+
+.vl-about-stat-number {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 2px;
+    width: 100%;
+    margin: 0 0 13px;
+    text-align: center;
+    color: var(--stats-text);
+}
+
+.vl-about-stat-value {
+    display: inline-block;
+    font-family: var(--heading-font);
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    color: var(--stats-text);
+}
+
+.vl-about-stat-suffix {
+    display: inline-block;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--stats-text);
+}
+
+/* TITLE */
+
+.vl-about-stat-card h3 {
+    display: block;
+    width: 100%;
+    margin: 0 0 10px;
+    font-family: var(--heading-font);
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.45;
+    text-align: center;
+    overflow-wrap: break-word;
+    color: var(--stats-text);
+}
+
+/* DESCRIPTION */
+
+.vl-about-stat-card p {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.65;
+    text-align: center;
+    color: var(--stats-muted);
+}
+
+/* BOTTOM DECORATIVE LINE */
+
+.vl-about-stat-bottom-line {
+    display: block;
+    width: 35px;
+    height: 2px;
+    flex-shrink: 0;
+    margin-top: auto;
+    padding-top: 0;
+    background: var(--stats-text);
+    opacity: 0.65;
+}
+
+/* FOOTER NOTE */
+
+.vl-about-stats-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.vl-about-stats-footer-line {
+    display: block;
+    width: 35px;
+    height: 1px;
+    flex-shrink: 0;
+    background: var(--stats-text);
+}
+
+.vl-about-stats-footer p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--stats-muted);
+}
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+html.dark-mode .vl-about-stats {
+    --stats-bg: #302335;
+    --stats-card-bg: #392C3D;
+    --stats-text: #F0EDE4;
+    --stats-muted: #D0C6D0;
+    --stats-border: rgba(240, 237, 228, 0.20);
+    --stats-number-bg: rgba(240, 237, 228, 0.06);
+}
+
+html.dark-mode .vl-about-stat-card:hover {
+    border-color: var(--stats-text);
+}
+
+/* ==========================================
+   RTL MODE
+========================================== */
+
+html[dir="rtl"] .vl-about-stats {
+    direction: rtl;
+}
+
+html[dir="rtl"] .vl-about-stats-heading,
+html[dir="rtl"] .vl-about-stat-card,
+html[dir="rtl"] .vl-about-stat-card h3,
+html[dir="rtl"] .vl-about-stat-card p {
+    text-align: center;
+}
+
+html[dir="rtl"] .vl-about-stat-number {
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* ==========================================
+   iPAD PRO / TABLET
+========================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .vl-about-stats {
+        padding: 70px 4%;
+    }
+
+    .vl-about-stats-heading {
+        margin-bottom: 38px;
+    }
+
+    .vl-about-stats-heading h2 {
+        font-size: 38px;
+    }
+
+    .vl-about-stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .vl-about-stat-card {
+        min-height: 255px;
+        padding: 24px 22px;
+    }
+
+    .vl-about-stat-value {
+        font-size: 46px;
+    }
+}
+
+/* ==========================================
+   iPAD MINI / MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+    .vl-about-stats {
+        padding: 60px 5%;
+    }
+
+    .vl-about-stats-heading {
+        margin-bottom: 32px;
+    }
+
+    .vl-about-stats-heading h2 {
+        font-size: 34px;
+    }
+
+    .vl-about-stats-heading p {
+        font-size: 16px;
+    }
+
+    .vl-about-stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    .vl-about-stat-card {
+        min-height: 250px;
+        padding: 22px 16px 20px;
+    }
+
+    .vl-about-stat-index {
+        margin-bottom: 15px;
+    }
+
+    .vl-about-stat-value {
+        font-size: 42px;
+    }
+
+    .vl-about-stat-suffix {
+        font-size: 24px;
+    }
+
+    .vl-about-stat-card h3 {
+        font-size: 18px;
+    }
+
+    .vl-about-stat-card p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+    .vl-about-stats {
+        padding: 50px 5%;
+    }
+
+    .vl-about-stats-heading h2 {
+        font-size: 30px;
+    }
+
+    .vl-about-stats-grid {
+        gap: 10px;
+    }
+
+    .vl-about-stat-card {
+        min-height: 245px;
+        padding: 19px 12px 17px;
+    }
+
+    .vl-about-stat-index {
+        width: 31px;
+        height: 31px;
+        margin-bottom: 14px;
+    }
+
+    .vl-about-stat-value {
+        font-size: 35px;
+    }
+
+    .vl-about-stat-suffix {
+        font-size: 21px;
+    }
+
+    .vl-about-stat-card h3 {
+        font-size: 16px;
+        line-height: 1.45;
+    }
+
+    .vl-about-stat-card p {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+    .vl-about-stats-footer {
+        gap: 9px;
+    }
+
+    .vl-about-stats-footer-line {
+        width: 20px;
+    }
+
+    .vl-about-stats-footer p {
+        font-size: 13px;
+    }
+}
+
+
+/* Stats Section - Mobile Single Column */
+@media screen and (max-width: 600px) {
+    .vl-about-stats-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+    .vl-about-stats-grid .vl-about-stat-card {
+        width: 100% !important;
+        min-height: 0 !important;
+        padding: 24px 18px !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .vl-about-stats-grid .vl-about-stat-number {
+        justify-content: center !important;
+    }
+
+    .vl-about-stats-grid .vl-about-stat-card h3,
+    .vl-about-stats-grid .vl-about-stat-card p {
+        width: 100% !important;
+        max-width: 320px !important;
+        text-align: center !important;
+    }
+
+    .vl-about-stats-grid .vl-about-stat-bottom-line {
+        margin-top: 18px !important;
+    }
+}
+
+
+/* ==========================================
    ABOUT SECTION 3 - OUR IMPACT
 ========================================== */
 

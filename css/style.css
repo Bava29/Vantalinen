@@ -13405,6 +13405,8 @@ html[dir="rtl"] .vl-location-directions i {
     }
 
     .vl2-strip-item {
+        display: grid;
+        grid-template-columns: 24px 220px;
         justify-content: center;
         align-items: center;
         padding: 15px 5px;
@@ -13415,6 +13417,10 @@ html[dir="rtl"] .vl-location-directions i {
 
     .vl2-strip-item>div {
         text-align: center;
+    }
+
+    .vl2-hero-strip>.vl2-strip-item>div {
+        min-width: 190px;
     }
 
     .vl2-strip-item h3 {
